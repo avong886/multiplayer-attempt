@@ -15,11 +15,11 @@
 
 <script >
 
-function saveData(){
+function activate(){
       $.ajax({
         type: "POST",
         url: "addplayer.php",
-        data: { name: $("select[name='players']").val()},
+        //data: { name: $("select[name='players']").val()},
         success:function( msg ) {
          alert( "Data Saved: " + msg );
         }
