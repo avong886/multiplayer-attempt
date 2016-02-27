@@ -19,7 +19,7 @@ function activate(submittedlocation, page_id)
 {
 
    $.ajax({
-      url: 'gamephp/activate.php',
+      url: 'gamephp/activated.php',
       type: 'post',
       data: 'rating='+submittedlocation+'&page_id='+page_id,
       success: function(output) 
