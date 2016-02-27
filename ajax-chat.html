@@ -18,7 +18,7 @@
 function saveData(){
       $.ajax({
         type: "POST",
-        url: "your_php_page.php",
+        url: "addplayer.php",
         data: { name: $("select[name='players']").val()},
         success:function( msg ) {
          alert( "Data Saved: " + msg );
