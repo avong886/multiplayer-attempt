@@ -12,11 +12,10 @@ if ($conn->connect_error) {
 die("Connection failed: " . $conn->connect_error);
 } 
 
-$page_id = mysqli_real_escape_string(html_entities($_POST['page_id']));
-$rating = mysqli_real_escape_string(html_entities($_POST['rating']));
+
 
 $sql = "INSERT INTO current_players (player_name, playerlocation)
-VALUES ('TheFirstPlayer', '$rating')";
+VALUES ('TheFirstPlayer', '(1,50,10)')";
 
 
 
