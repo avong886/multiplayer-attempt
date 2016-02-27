@@ -11,15 +11,15 @@
 
 <button onclick="activate( [(1,10,50)], $_POST['page_id'] )">Activate</button>
 
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
-<script type="text/javascript" src="jquery.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+
 <script type="text/javascript">
 function doSomething() {
 
 $.ajax({
       url: 'activator.php',
       type: 'POST',
-      data: 'battlecode': 53 ,
+      data: 'battlecode': '53',
       success: function() 
       {
           alert('success, server says ');
