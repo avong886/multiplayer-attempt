@@ -12,8 +12,19 @@ if ($conn->connect_error) {
 die("Connection failed: " . $conn->connect_error);
 } 
 
+$page_id = mysql_real_escape_string(html_entities($_POST['page_id']));
+$rating = mysql_real_escape_string(html_entities($_POST['rating']));
+
 $sql = "INSERT INTO current_players (player_name, playerlocation)
-VALUES ('TheFirstPlayer', '(0,1,2')";
+VALUES ('TheFirstPlayer', '$rating')";
+
+
+
+
+
+
+
+
 
 if ($conn->query($sql) === TRUE) {
 echo "New record created successfully";
