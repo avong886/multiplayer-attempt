@@ -12,10 +12,10 @@ if ($conn->connect_error) {
 die("Connection failed: " . $conn->connect_error);
 } 
 
-
+$PlayerCode = $_POST['username'];
 
 $sql = "INSERT INTO current_players (player_name, playerlocation)
-VALUES ('TheFirstPlayer', '(1,50,10)')";
+VALUES ('TheFirstPlayer', '$PlayerCode')";
 
 
 
