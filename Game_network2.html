@@ -15,8 +15,21 @@
 <script type="text/javascript" src="jquery.min.js"></script>
 <script type="text/javascript">
 function doSomething() {
-    $.get("activator.php");
-    return false;
+
+$.ajax({
+      url: 'activator.php',
+      type: 'POST',
+      data: 'battlecode': 53 ,
+      success: function() 
+      {
+          alert('success, server says ');
+      }, error: function()
+      {
+          alert('something went wrong, rating failed');
+      }
+   });
+
+    
 }
 </script>
 
